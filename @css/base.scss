@@ -1,0 +1,165 @@
+$main_menu_switch_background: #969696;
+$main_menu_switch_border_color: #424242;
+$main_menu_background: #979797F6;
+$main_menu_text_color: #006600;
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: Geneva;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.header__logo {
+    width: 10rem;
+}
+
+.header__title {
+    margin: .2rem 0;
+}
+
+.main {
+    display: block;
+    width: 100vw;
+}
+
+// START: MAIN NAVIGATION (TOP HORIZONTAL & SIDE) -----------------------------
+.main_navigation {
+    display: block;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.main_navigation__menu_button {
+    background-color: $main_menu_switch_background;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding: .2rem;
+    border: .2rem solid $main_menu_switch_border_color;
+    border-radius: .4rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.main_navigation__menu {
+    background-color: $main_menu_background;
+    display: none;
+    position: absolute;
+    width: fit-content;
+    border: .1rem solid $main_menu_switch_border_color;
+    border-radius: .4rem;
+    list-style-type: none;
+}
+
+.main_navigation__menu_button:hover ~ .main_navigation__menu {
+    display: block;
+}
+
+.main_navigation__menu:hover {
+    display: block;
+}
+
+.main_navigation__menu_item {
+    padding: .4rem;
+    color: $main_menu_text_color;
+    font-weight: bold;
+    text-align: center;
+}
+// END: MAIN NAVIGATION (TOP HORIZONTAL & SIDE) -------------------------------
+
+.main__content {
+    width: 100vw;
+    padding-top: 1rem;
+    text-align: justify;
+}
+
+.main__title, .main__text {
+    margin: 1rem;
+}
+
+.form_group {
+    width: 30rem;
+    min-width: 30rem;
+    margin: 1rem auto;
+}
+
+.form_group__container {
+    background-color: rgba(0, 0, 0, 0.1);
+    min-width: 28rem;
+    border: 0.2rem solid #003688;
+    border-radius: 2rem;
+    margin: 1rem auto;
+}
+
+.form_group__title {
+    text-align: center;
+    margin: 1rem;
+}
+
+.form_group__text {
+    margin: 1rem;
+}
+
+.form_group__image {
+    display: block;
+    width: 10rem;
+    margin: 0 auto;
+}
+
+.form_group__form {
+    min-width: 26rem;
+}
+
+.form_group__form fieldset {
+    display: block;
+    padding: 1rem;
+    border: 0.1rem solid $main_menu_switch_border_color;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.form_group__form legend {
+    padding: 0.4rem;
+    font-weight: bold;
+}
+
+.form_group__form label {
+    font-weight: bold;
+}
+
+.form_group__form input {
+    padding: 0.5em;
+    border: 0.1rem solid $main_menu_switch_border_color;
+    border-radius: 0.4rem;
+    margin: 0.2rem 0;
+}
+
+.form_group__form input[type=button] {
+    margin: 0.8rem;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer hr {
+    width: 90vw;
+    margin: 2rem auto 1rem auto;
+    border: .1rem solid $main_menu_switch_border_color;
+}
+
+.footer__copyright {
+    font-weight: bold;
+}
