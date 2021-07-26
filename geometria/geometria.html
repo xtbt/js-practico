@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/js-practico/@css/base.css" />
+    <script type="text/javascript" src="geometria.js"></script>
+    <title>Ejercicios de Javascript Básico</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="/js-practico/@images/logo_ip20.png" alt="Logo IP20" />
+        <h1 class="header__title">FIGURAS GEOMÉTRICAS</h1>
+    </header>
+    <main class="main">
+        <nav class="main_navigation">
+            <p class="main_navigation__menu_button">&#8801; Menú</p>
+            <ul class="main_navigation__menu">
+                <li class="main_navigation__menu_item">INICIO</li>
+                <li class="main_navigation__menu_item">FIGURAS GEOMÉTRICAS</li>
+                <li class="main_navigation__menu_item">JUGANDO CON PRECIOS</li>
+                <li class="main_navigation__menu_item">PROMEDIO, MODA Y MEDIANA</li>
+                <li class="main_navigation__menu_item">SALARIOS</li>
+            </ul>
+        </nav>
+        <section class="main__content">
+            <h2 class="main__title">Figuras geométricas</h2>
+            <p class="main__text">Cálculo de perímetros y áreas de figuras geométricas, utilizando operadores matemáticos básicos.</p>
+            <section class="form_group">
+                <div class="form_group__container">
+                    <h3 class="form_group__title">El Cuadrado</h3>
+                    <img class="form_group__image" src="/js-practico/@images/cuadrado.png" alt="Cuadrado" />
+                    <p class="form_group__text">Perímetro del cuadrado: L + L + L + L</p>
+                    <p class="form_group__text">Área del cuadrado: L x L</p>
+                    <form class="form_group__form" method="post">
+                        <fieldset>
+                            <legend>Entradas de usuario</legend>
+                            <label for="num_ladoCuadrado">Lado: </label>
+                            <input type="number" name="numLadoCuadrado" id="numLadoCuadrado" min="0" max="999" required="required"/>
+                            <span>* Numero entre 0 y 999 metros.</span>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Resultados</legend>
+                            <label>Perímetro: </label>
+                            <input type="number" name="numPerimetroCuadrado" id="numPerimetroCuadrado" min="0" max="3999" readonly="readonly" />
+                            <span>metros.</span>
+                            <br />
+                            <label>Área: </label>
+                            <input type="number" name="numAreaCuadrado" id="numAreaCuadrado" min="0" max="999999" readonly="readonly" />
+                            <span>metros.</span>
+                        </fieldset>
+                        <input type="button" id="btnCalcularCuadrado" value="Calcular" />
+                    </form>
+                </div>
+                <div class="form_group__container">
+                    <h3 class="form_group__title">El Rectángulo</h3>
+                    <img class="form_group__image" src="/js-practico/@images/rectangulo.png" alt="Rectángulo" />
+                    <p class="form_group__text">Perímetro del rectángulo: (2 x B) + (2 x H)</p>
+                    <p class="form_group__text">Área del rectangulo: B x H</p>
+                    <form class="form_group__form" method="post">
+                        <fieldset>
+                            <legend>Entradas de usuario</legend>
+                            <label for="numBaseRectangulo">Base (B): </label>
+                            <input type="number" name="numBaseRectangulo" id="numBaseRectangulo" min="0" max="999" required="required"/>
+                            <span>* Numero entre 0 y 999 metros.</span>
+                            <br />
+                            <label for="numAlturaRectangulo">Altura (H): </label>
+                            <input type="number" name="numAlturaRectangulo" id="numAlturaRectangulo" min="0" max="999" required="required"/>
+                            <span>* Numero entre 0 y 999 metros.</span>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Resultados</legend>
+                            <label>Perímetro: </label>
+                            <input type="number" name="numPerimetroRectangulo" id="numPerimetroRectangulo" min="0" max="3999" readonly="readonly" />
+                            <span>metros.</span>
+                            <br />
+                            <label>Área: </label>
+                            <input type="number" name="numAreaRectangulo" id="numAreaRectangulo" min="0" max="999999" readonly="readonly" />
+                            <span>metros.</span>
+                        </fieldset>
+                        <input type="button" id="btnCalcularRectangulo" value="Calcular" />
+                    </form>
+                </div>
+                <div class="form_group__container">
+                    <h3 class="form_group__title">El Triángulo</h3>
+                    <img class="form_group__image" src="/js-practico/@images/triangulo.png" alt="Triángulo" />
+                    <p class="form_group__text">Perímetro del triángulo: B + LD + LI</p>
+                    <p class="form_group__text">Área del triángulo: (B x H) / 2</p>
+                    <form class="form_group__form" method="post">
+                        <fieldset>
+                            <legend>Entradas de usuario</legend>
+                            <label for="numBaseTriangulo">Base (B): </label>
+                            <input type="number" name="numBaseTriangulo" id="numBaseTriangulo" min="0" max="999" required="required"/>
+                            <span>* Numero entre 0 y 999 metros.</span>
+                            <br />
+                            <label for="numLDTriangulo">Lado Derecho (LD): </label>
+                            <input type="number" name="numLDTriangulo" id="numLDTriangulo" min="0" max="999" required="required"/>
+                            <span>* Numero entre 0 y 999 metros.</span>
+                            <br />
+                            <label for="numLITriangulo">Lado Izquierdo (LI): </label>
+                            <input type="number" name="numLITriangulo" id="numLITriangulo" min="0" max="999" required="required"/>
+                            <span>* Numero entre 0 y 999 metros.</span>
+                            <br />
+                            <label for="numAlturaTriangulo">Altura (H): </label>
+                            <input type="number" name="numAlturaTriangulo" id="numAlturaTriangulo" min="0" max="999" required="required"/>
+                            <span>* Numero entre 0 y 999 metros (Sólo para área).</span>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Resultados</legend>
+                            <label>Perímetro: </label>
+                            <input type="number" name="numPerimetroTriangulo" id="numPerimetroTriangulo" min="0" max="3999" readonly="readonly" />
+                            <span>metros.</span>
+                            <br />
+                            <label>Área: </label>
+                            <input type="number" name="numAreaTriangulo" id="numAreaTriangulo" min="0" max="999999" readonly="readonly" />
+                            <span>metros.</span>
+                        </fieldset>
+                        <input type="button" id="btnCalcularTriangulo" value="Calcular" />
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr />
+        <p class="footer__copyright"><em>Copyright &#169; JS-Luna 2021</em></p>
+    </footer>
+</body>
+</html>
