@@ -129,6 +129,7 @@ html {
 }
 
 .form_group__form label {
+  display: block;
   font-weight: bold;
 }
 
@@ -137,6 +138,10 @@ html {
   border: 0.1rem solid #424242;
   border-radius: 0.4rem;
   margin: 0.2rem 0;
+}
+
+.form_group__form label {
+  display: block;
 }
 
 .form_group__form input[type=button] {
