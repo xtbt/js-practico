@@ -90,31 +90,28 @@
                     <form class="form_group__form" method="post">
                         <fieldset>
                             <legend>Entradas de usuario</legend>
-                            <label for="numBaseTriangulo">Base (B): </label>
-                            <input type="number" name="numBaseTriangulo" id="numBaseTriangulo" min="0" max="999" required="required"/>
-                            <span>* Numero entre 0 y 999 metros.</span>
-                            <br />
-                            <label for="numLDTriangulo">Lado Derecho (LD): </label>
-                            <input type="number" name="numLDTriangulo" id="numLDTriangulo" min="0" max="999" required="required"/>
-                            <span>* Numero entre 0 y 999 metros.</span>
-                            <br />
-                            <label for="numLITriangulo">Lado Izquierdo (LI): </label>
-                            <input type="number" name="numLITriangulo" id="numLITriangulo" min="0" max="999" required="required"/>
-                            <span>* Numero entre 0 y 999 metros.</span>
-                            <br />
-                            <label for="numAlturaTriangulo">Altura (H): </label>
-                            <input type="number" name="numAlturaTriangulo" id="numAlturaTriangulo" min="0" max="999" required="required"/>
-                            <span>* Numero entre 0 y 999 metros (Sólo para área).</span>
+                            <label for="numBaseTriangulo">Base (B):
+                                <input type="number" name="numBaseTriangulo" id="numBaseTriangulo" min="0" max="999" required="required"/>
+                            </label>
+                            <label for="numLDTriangulo">Lado Derecho (LD):
+                                <input type="number" name="numLDTriangulo" id="numLDTriangulo" min="0" max="999" required="required"/>
+                            </label>
+                            <label for="numLITriangulo">Lado Izquierdo (LI):
+                                <input type="number" name="numLITriangulo" id="numLITriangulo" min="0" max="999" required="required"/>
+                            </label>
+                            <label for="numAlturaTriangulo">Altura (H):
+                                <input type="number" name="numAlturaTriangulo" id="numAlturaTriangulo" min="0" max="999" required="required"/>
+                            </label>
+                            <span>(Sólo para área)</span>
                         </fieldset>
                         <fieldset>
                             <legend>Resultados</legend>
-                            <label>Perímetro: </label>
-                            <input type="number" name="numPerimetroTriangulo" id="numPerimetroTriangulo" min="0" max="3999" readonly="readonly" />
-                            <span>metros.</span>
-                            <br />
-                            <label>Área: </label>
-                            <input type="number" name="numAreaTriangulo" id="numAreaTriangulo" min="0" max="999999" readonly="readonly" />
-                            <span>metros.</span>
+                            <label>Perímetro:
+                                <input type="number" name="numPerimetroTriangulo" id="numPerimetroTriangulo" min="0" max="3999" readonly="readonly" />
+                            </label>
+                            <label>Área:
+                                <input type="number" name="numAreaTriangulo" id="numAreaTriangulo" min="0" max="999999" readonly="readonly" />
+                            </label>
                         </fieldset>
                         <input type="button" id="btnCalcularTriangulo" value="Calcular" />
                     </form>
