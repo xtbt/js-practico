@@ -55,22 +55,26 @@ window.onload = (ev) => {
     if (null != btnTriangulo) {
         btnTriangulo.addEventListener('click', function () {
             const numBaseTriangulo = null != document.getElementById('numBaseTriangulo') ? document.getElementById('numBaseTriangulo') : null;
+            const numLDTriangulo = null != document.getElementById('numLDTriangulo') ? document.getElementById('numLDTriangulo') : null;
+            const numLITriangulo = null != document.getElementById('numLITriangulo') ? document.getElementById('numLITriangulo') : null;
             const numAlturaTriangulo = null != document.getElementById('numAlturaTriangulo') ? document.getElementById('numAlturaTriangulo') : null;
             let baseTriangulo = 0;
+            let ldTriangulo = 0;
+            let liTriangulo = 0;
             let alturaTriangulo = 0;
-            if (null != numBaseTriangulo && null != numAlturaTriangulo) {
+            if (null != numBaseTriangulo && null != numLDTriangulo && null != numLITriangulo) {
                 baseTriangulo = numBaseTriangulo.value;
                 alturaTriangulo = numAlturaTriangulo.value;
+                if (null != document.getElementById('numPerimetroTriangulo'))
+                    document.getElementById('numPerimetroTriangulo').value = calcularPerimetroTriangulo(baseTriangulo, ldTriangulo, liTriangulo);
+                if (null != document.getElementById('numAreaTriangulo'))
+                    document.getElementById('numAreaTriangulo').value = calcularAreaTriangulo(baseTriangulo, alturaTriangulo);
             };
-            if (null != document.getElementById('numPerimetroTriangulo'))
-                document.getElementById('numPerimetroTriangulo').value = calcularPerimetroTriangulo(baseTriangulo, alturaTriangulo);
-            if (null != document.getElementById('numAreaTriangulo'))
-                document.getElementById('numAreaTriangulo').value = calcularAreaTriangulo(baseTriangulo, alturaTriangulo);
         });
     };
 
-    function calcularPerimetroTriangulo (baseTriangulo, alturaTriangulo) {
-        return Number(baseTriangulo * 2 + alturaTriangulo * 2);
+    function calcularPerimetroTriangulo (baseTriangulo, ldTriangulo, liTriangulo) {
+        return Number(baseTriangulo + ldTriangulo + liTriangulo);
     };
 
     function calcularAreaTriangulo (baseTriangulo, alturaTriangulo) {
