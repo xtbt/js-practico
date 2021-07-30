@@ -5,8 +5,8 @@ $main_menu_text_color: #006600;
 $main_menu_item_background_hover_color: #ababab;
 
 * {
+    box-sizing: border-box;
     padding: 0;
-    border: 0;
     margin: 0;
 }
 
@@ -40,16 +40,15 @@ html {
 .main_navigation {
     display: block;
     width: 100%;
-    margin: 1rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .main_navigation__menu_button {
     background-color: $main_menu_switch_background;
     display: block;
-    width: 2rem;
+    width: 2.2rem;
     padding: .2rem;
     border: .1rem solid $main_menu_switch_border_color;
-    margin: 0;
 }
 
 .main_navigation__menu {
@@ -90,21 +89,20 @@ html {
 // END: MAIN NAVIGATION (TOP HORIZONTAL & SIDE) -------------------------------
 
 .main__content {
-    width: 100vw;
-    text-align: justify;
-    margin: 1rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .main__title, .main__text {
-    margin: 1rem 0;
+    padding: 0.4rem 0;
+    text-align: justify;
 }
 
 .form_group {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    min-width: 30rem;
-    margin: 1rem 1rem;
+    min-width: 28rem;
 }
 
 .form_group__container {
@@ -113,7 +111,7 @@ html {
     width: 28rem;
     border: 0.2rem solid #003688;
     border-radius: 2rem;
-    margin: 1rem auto;
+    margin: 1rem 0;
 }
 
 .form_group__title {
@@ -123,6 +121,10 @@ html {
 
 .form_group__text {
     margin: 1rem;
+}
+
+.form_group__text--error {
+    color: #FF0000;
 }
 
 .form_group__image {

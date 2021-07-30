@@ -36,14 +36,15 @@
                     <form class="form_group__form" method="post">
                         <fieldset>
                             <legend>Entradas de usuario</legend>
-                            <label for="num_ladoCuadrado">Lado:
+                            <label for="numladoCuadrado">Lado:
                                 <input type="number" name="numLadoCuadrado" id="numLadoCuadrado" min="0" max="999" required="required"/>
                             </label>
+                            <p class="form_group__text--error" id="avisoCuadrado"></p>
                         </fieldset>
                         <fieldset>
                             <legend>Resultados</legend>
                             <label>Perímetro:
-                                <input type="number" name="numPerimetroCuadrado" id="numPerimetroCuadrado" min="0" max="3999" readonly="readonly" />
+                                <input type="number" name="numPerimetroCuadrado" id="numPerimetroCuadrado" min="0" max="999999" readonly="readonly" />
                             </label>
                             <label>Área:
                                 <input type="number" name="numAreaCuadrado" id="numAreaCuadrado" min="0" max="999999" readonly="readonly" />
@@ -66,11 +67,12 @@
                             <label for="numAlturaRectangulo">Altura (H):
                                 <input type="number" name="numAlturaRectangulo" id="numAlturaRectangulo" min="0" max="999" required="required"/>
                             </label>
+                            <p class="form_group__text--error" id="avisoRectangulo"></p>
                         </fieldset>
                         <fieldset>
                             <legend>Resultados</legend>
                             <label>Perímetro:
-                                <input type="number" name="numPerimetroRectangulo" id="numPerimetroRectangulo" min="0" max="3999" readonly="readonly" />
+                                <input type="number" name="numPerimetroRectangulo" id="numPerimetroRectangulo" min="0" max="999999" readonly="readonly" />
                             </label>
                             <label>Área:
                                 <input type="number" name="numAreaRectangulo" id="numAreaRectangulo" min="0" max="999999" readonly="readonly" />
@@ -90,26 +92,49 @@
                             <label for="numBaseTriangulo">Base (B):
                                 <input type="number" name="numBaseTriangulo" id="numBaseTriangulo" min="0" max="999" required="required"/>
                             </label>
-                            <label for="numLDTriangulo">Lado Derecho (LD):
-                                <input type="number" name="numLDTriangulo" id="numLDTriangulo" min="0" max="999" required="required"/>
-                            </label>
                             <label for="numLITriangulo">Lado Izquierdo (LI):
                                 <input type="number" name="numLITriangulo" id="numLITriangulo" min="0" max="999" required="required"/>
                             </label>
-                            <label for="numAlturaTriangulo">Altura (H) (Sólo para área):
-                                <input type="number" name="numAlturaTriangulo" id="numAlturaTriangulo" min="0" max="999" required="required"/>
+                            <label for="numLDTriangulo">Lado Derecho (LD):
+                                <input type="number" name="numLDTriangulo" id="numLDTriangulo" min="0" max="999" required="required"/>
                             </label>
+                            <p class="form_group__text--error" id="avisoTriangulo"></p>
                         </fieldset>
                         <fieldset>
                             <legend>Resultados</legend>
                             <label>Perímetro:
-                                <input type="number" name="numPerimetroTriangulo" id="numPerimetroTriangulo" min="0" max="3999" readonly="readonly" />
+                                <input type="number" name="numPerimetroTriangulo" id="numPerimetroTriangulo" min="0" max="999999" readonly="readonly" />
                             </label>
                             <label>Área:
                                 <input type="number" name="numAreaTriangulo" id="numAreaTriangulo" min="0" max="999999" readonly="readonly" />
                             </label>
                         </fieldset>
                         <input type="button" id="btnCalcularTriangulo" value="Calcular" />
+                    </form>
+                </div>
+                <div class="form_group__container">
+                    <h3 class="form_group__title">El Círculo</h3>
+                    <img class="form_group__image" src="/js-practico/@images/circulo.png" alt="Círculo" />
+                    <p class="form_group__text">Perímetro del círculo: 2&#928; * radio</p>
+                    <p class="form_group__text">Área del círculo: &#928;r<sup>2</sup></p>
+                    <form class="form_group__form" method="post">
+                        <fieldset>
+                            <legend>Entradas de usuario</legend>
+                            <label for="numRadioCirculo">Radio (r):
+                                <input type="number" name="numRadioCirculo" id="numRadioCirculo" min="0" max="999" required="required"/>
+                            </label>
+                            <p class="form_group__text--error" id="avisoCirculo"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Resultados</legend>
+                            <label>Perímetro:
+                                <input type="number" name="numPerimetroCirculo" id="numPerimetroCirculo" min="0" max="999999" readonly="readonly" />
+                            </label>
+                            <label>Área:
+                                <input type="number" name="numAreaCirculo" id="numAreaCirculo" min="0" max="999999" readonly="readonly" />
+                            </label>
+                        </fieldset>
+                        <input type="button" id="btnCalcularCirculo" value="Calcular" />
                     </form>
                 </div>
             </section>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/js-practico/@css/base.css" />
+    <script type="text/javascript" src="geometria.js"></script>
+    <title>Javascript Práctico: Precios y Descuentos</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="/js-practico/@images/logo_ip20.png" alt="Logo IP20" />
+        <h1 class="header__title">Javascript Práctico: Precios y Descuentos</h1>
+    </header>
+    <main class="main">
+        <nav class="main_navigation">
+            <img class="main_navigation__menu_button" src="/js-practico/@images/burgermenu.png" />
+            <ul class="main_navigation__menu">
+                <li class="main_navigation__menu_item"><a href="/js-practico/index.html">INICIO</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/geometria/geometria.html">FIGURAS GEOMÉTRICAS</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/descuento/descuento.html">PRECIOS Y DESCUENTOS</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/promedio/promedio.html">PROMEDIO, MEDIANA Y MODA</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/salario/salario.html">SALARIOS</a></li>
+            </ul>
+        </nav>
+        <section class="main__content">
+            <h2 class="main__title">Precios y Descuentos</h2>
+            <p class="main__text">Cálculo de descuentos aplicando fórmulas matemáticas básicas, o aplicando un cupón de descuento.</p>
+            <section class="form_group">
+                <div class="form_group__container">
+                    <h3 class="form_group__title">Descuento fijo</h3>
+                    <p class="form_group__text">Introduce un descuento fijo para aplicarle a los productos.</p>
+                    <form class="form_group__form" method="post">
+                        <fieldset>
+                            <legend>Listado de Productos</legend>
+                            <p class="form_group__text">Nombre Producto 1</p>
+                            <label for="numCostoProducto-1">Costo:
+                                <input type="number" name="numCostoProducto-1" id="numCostoProducto-1" min="0" max="9999" required="required" />
+                            </label>
+                            <label for="numDescuentoProducto-1">Costo c/descuento:
+                                <input type="number" name="numDescuentoProducto-1" id="numDescuentoProducto-1" min="0" max="9999" readonly="readonly" />
+                            </label>
+                            <p class="form_group__text--error" id="avisoFijo"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Descuentos</legend>
+                            <label>Introduce descuento fijo:
+                                <input type="number" name="numDescuento" id="numDescuento" min="0" max="100" required="required" />
+                            </label>
+                        </fieldset>
+                        <input type="button" id="btnCalcularDescuento" value="Calcular" />
+                    </form>
+                </div>
+                <div class="form_group__container">
+                    <h3 class="form_group__title">Descuento por cupón</h3>
+                    <p class="form_group__text">Introduce un cupón de descuento para aplicarle a los productos.</p>
+                    <form class="form_group__form" method="post">
+                        <fieldset>
+                            <legend>Listado de productos</legend>
+                            <p class="form_group__text">Nombre Producto 1</p>
+                            <label for="numCostoProducto-4">Costo:
+                                <input type="number" name="numCostoProducto-4" id="numCostoProducto-4" min="0" max="9999" required="required" />
+                            </label>
+                            <label for="numDescuentoProducto-4">Costo c/descuento:
+                                <input type="number" name="numDescuentoProducto-4" id="numDescuentoProducto-4" min="0" max="9999" readonly="readonly" />
+                            </label>
+                            <p class="form_group__text--error" id="avisoCupon"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Cupón de descuentos</legend>
+                            <label>Introduce codigo:
+                                <input type="text" name="txtCodigo" id="txtCodigo" size="8" maxlength="8" required="required" />
+                            </label>
+                        </fieldset>
+                        <input type="button" id="btnCalcularDescuento" value="Calcular" />
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr />
+        <p class="footer__copyright"><em>Copyright &#169; JS-Luna 2021</em></p>
+    </footer>
+</body>
+</html>
