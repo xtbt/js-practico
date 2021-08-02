@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/js-practico/@css/base.css" />
+    <script type="text/javascript" src="promedio.js"></script>
+    <title>Javascript Práctico: Promedio, Mediana y Moda</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="/js-practico/@images/logo_ip20.png" alt="Logo IP20" />
+        <h1 class="header__title">Javascript Práctico: Promedio, Mediana y Moda</h1>
+    </header>
+    <main class="main">
+        <nav class="main_navigation">
+            <img class="main_navigation__menu_button" src="/js-practico/@images/burgermenu.png" />
+            <ul class="main_navigation__menu">
+                <li class="main_navigation__menu_item"><a href="/js-practico/index.html">INICIO</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/geometria/geometria.html">FIGURAS GEOMÉTRICAS</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/descuento/descuento.html">PRECIOS Y DESCUENTOS</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/promedio/promedio.html">PROMEDIO, MEDIANA Y MODA</a></li>
+                <li class="main_navigation__menu_item"><a href="/js-practico/salario/salario.html">SALARIOS</a></li>
+            </ul>
+        </nav>
+        <section class="main__content">
+            <h2 class="main__title">Promedio, Mediana y Moda</h2>
+            <p class="main__text">Cálculo de promedio, mediana y moda, a partir de una lista aleatoria de elementos.</p>
+            <section class="form_group">
+                <div class="form_group__container">
+                    <h3 class="form_group__title">Listado de elementos</h3>
+                    <p class="form_group__text">A continuación se muestra un listado de elementos con los que se podran calcular el promedio, la mediana y la moda.</p>
+                    <form class="form_group__form" method="post">
+                        <fieldset>
+                            <legend>Elementos de prueba</legend>
+                            <select id="selElementos">
+                            </select>
+                            <p class="form_group__text--error" id="msjAvisoListado"></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Resultados</legend>
+                            <label>Promedio:
+                                <input type="number" name="numPromedio" id="numPromedio" readonly="readonly" />
+                            </label>
+                            <label>Mediana:
+                                <input type="number" name="numMediana" id="numMediana" readonly="readonly" />
+                            </label>
+                            <label>Moda:
+                                <input type="text" name="numModa" id="numModa" readonly="readonly" />
+                            </label>
+                        </fieldset>
+                        <input type="button" id="btnCalcularPromedio" value="Calcular Promedio" />
+                        <input type="button" id="btnCalcularMediana" value="Ordenar y Calcular Mediana">
+                        <input type="button" id="btnCalcularModa" value="Calcular Moda">
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr />
+        <p class="footer__copyright"><em>Copyright &#169; JS-Luna 2021</em></p>
+    </footer>
+</body>
+</html>

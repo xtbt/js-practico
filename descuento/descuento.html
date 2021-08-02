@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/js-practico/@css/base.css" />
-    <script type="text/javascript" src="geometria.js"></script>
+    <script type="text/javascript" src="descuento.js"></script>
     <title>Javascript Práctico: Precios y Descuentos</title>
 </head>
 <body>
@@ -30,50 +30,58 @@
             <section class="form_group">
                 <div class="form_group__container">
                     <h3 class="form_group__title">Descuento fijo</h3>
-                    <p class="form_group__text">Introduce un descuento fijo para aplicarle a los productos.</p>
+                    <p class="form_group__text">Introduce un descuento fijo para aplicarle al siguiente producto.</p>
                     <form class="form_group__form" method="post">
                         <fieldset>
-                            <legend>Listado de Productos</legend>
-                            <p class="form_group__text">Nombre Producto 1</p>
-                            <label for="numCostoProducto-1">Costo:
-                                <input type="number" name="numCostoProducto-1" id="numCostoProducto-1" min="0" max="9999" required="required" />
-                            </label>
-                            <label for="numDescuentoProducto-1">Costo c/descuento:
-                                <input type="number" name="numDescuentoProducto-1" id="numDescuentoProducto-1" min="0" max="9999" readonly="readonly" />
-                            </label>
-                            <p class="form_group__text--error" id="avisoFijo"></p>
+                            <legend>Entrada de usuario</legend>
+                            <p id="nombreProducto1" class="form_group__text form_group__text--important"></p>
+                            <label for="numCostoProducto1">Costo:
+                                <input type="text" name="numCostoProducto1" id="numCostoProducto1" size="10" readonly="readonly" />
+                            dólares</label>
+                            <label for="numDescuentoProducto1">Descuento:
+                                <input type="number" name="numDescuentoProducto1" id="numDescuentoProducto1" min="0" max="100" required="required" />
+                            %</label>
+                            <p class="form_group__text--error" id="msjAvisoDescuentoFijo"></p>
                         </fieldset>
                         <fieldset>
-                            <legend>Descuentos</legend>
-                            <label>Introduce descuento fijo:
-                                <input type="number" name="numDescuento" id="numDescuento" min="0" max="100" required="required" />
-                            </label>
+                            <legend>Resultados</legend>
+                            <label>Se descuentan
+                                <input type="text" name="numDescuentoSobreCosto1" id="numDescuentoSobreCosto1" size="10" readonly="readonly" />
+                            dólares sobre el precio de lista.</label>
+                            <label>El costo total con descuento es de:
+                                <input type="text" name="numTotalConDescuento1" id="numTotalConDescuento1" size="10" readonly="readonly" />
+                            dólares.</label>
                         </fieldset>
-                        <input type="button" id="btnCalcularDescuento" value="Calcular" />
+                        <input type="button" id="btnCalcularDescuentoFijo" value="Calcular" />
                     </form>
                 </div>
                 <div class="form_group__container">
                     <h3 class="form_group__title">Descuento por cupón</h3>
                     <p class="form_group__text">Introduce un cupón de descuento para aplicarle a los productos.</p>
+                    <p class="form_group__text">Intenta con: kame-hame-ha, sheng-long, gogeta o kakarotto.</p>
                     <form class="form_group__form" method="post">
                         <fieldset>
-                            <legend>Listado de productos</legend>
-                            <p class="form_group__text">Nombre Producto 1</p>
-                            <label for="numCostoProducto-4">Costo:
-                                <input type="number" name="numCostoProducto-4" id="numCostoProducto-4" min="0" max="9999" required="required" />
+                            <legend>Entrada de usuario</legend>
+                            <p id="nombreProducto2" class="form_group__text form_group__text--important"></p>
+                            <label for="numCostoProducto2">Costo:
+                                <input type="text" name="numCostoProducto2" id="numCostoProducto2" size="10" readonly="readonly" />
+                            dólares</label>
+                            <label for="txtCuponDescuento2">Código de cupón:
+                                <input type="text" name="txtCuponDescuento2" id="txtCuponDescuento2" maxlength="12" required="required" />
                             </label>
-                            <label for="numDescuentoProducto-4">Costo c/descuento:
-                                <input type="number" name="numDescuentoProducto-4" id="numDescuentoProducto-4" min="0" max="9999" readonly="readonly" />
-                            </label>
-                            <p class="form_group__text--error" id="avisoCupon"></p>
+                            <p class="form_group__text--error" id="msjAvisoDescuentoCupon"></p>
                         </fieldset>
                         <fieldset>
-                            <legend>Cupón de descuentos</legend>
-                            <label>Introduce codigo:
-                                <input type="text" name="txtCodigo" id="txtCodigo" size="8" maxlength="8" required="required" />
-                            </label>
+                            <legend>Resultados</legend>
+                            <p id="msjInfoCupon" class="form_group__text"></p>
+                            <label>Se descuentan
+                                <input type="text" name="numDescuentoSobreCosto2" id="numDescuentoSobreCosto2" size="10" readonly="readonly" />
+                            dólares sobre el precio de lista.</label>
+                            <label>El costo total con descuento es de:
+                                <input type="text" name="numTotalConDescuento2" id="numTotalConDescuento2" size="10" readonly="readonly" />
+                            dólares.</label>
                         </fieldset>
-                        <input type="button" id="btnCalcularDescuento" value="Calcular" />
+                        <input type="button" id="btnCalcularDescuentoCupon" value="Calcular" />
                     </form>
                 </div>
             </section>

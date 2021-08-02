@@ -55,7 +55,7 @@ html {
     background-color: $main_menu_background;
     display: none;
     position: absolute;
-    width: 90vw;
+    width: 88vw;
     max-width: 400px;
     border: .1rem solid $main_menu_switch_border_color;
     list-style-type: none;
@@ -84,7 +84,6 @@ html {
 }
 .main_navigation__menu_item a:hover {
     background-color: $main_menu_item_background_hover_color;
-    text-decoration: underline;
 }
 // END: MAIN NAVIGATION (TOP HORIZONTAL & SIDE) -------------------------------
 
@@ -120,7 +119,13 @@ html {
 }
 
 .form_group__text {
-    margin: 1rem;
+    text-align: justify;
+    margin: 0 1rem 1rem;
+}
+
+.form_group__text--important {
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .form_group__text--error {
@@ -129,8 +134,8 @@ html {
 
 .form_group__image {
     display: block;
-    width: 10rem;
-    margin: 0 auto;
+    width: 8rem;
+    margin: .5rem auto;
 }
 
 .form_group__form {
@@ -153,6 +158,7 @@ html {
 .form_group__form label {
     display: block;
     font-weight: bold;
+    margin: 0 0 1.2rem 0;
 }
 
 .form_group__form input {
@@ -170,6 +176,10 @@ html {
     margin: 0.8rem;
 }
 
+.form_group__form select {
+    width: 100%;
+}
+
 .footer {
     text-align: center;
 }
@@ -182,4 +192,16 @@ html {
 
 .footer__copyright {
     font-weight: bold;
+}
+
+@media only screen and (min-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    html {
+        font-size: 14px;
+    }
 }
