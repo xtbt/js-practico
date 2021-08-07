@@ -76,9 +76,16 @@ window.onload = (ev) => {
             let liTriangulo = null != numLITriangulo ? Number(numLITriangulo.value) : 0;
             let ldTriangulo = null != numLDTriangulo ? Number(numLDTriangulo.value) : 0;
             if (0 != baseTriangulo && 0 != liTriangulo && 0 != ldTriangulo) {
-                numPerimetroTriangulo.value = calcularPerimetroTriangulo(baseTriangulo, ldTriangulo, liTriangulo);
-                numAreaTriangulo.value = calcularAreaTriangulo(baseTriangulo, ldTriangulo, liTriangulo);
-                pAvisoTriangulo.innerText = '';
+                if (baseTriangulo+liTriangulo <= ldTriangulo || liTriangulo+ldTriangulo <= baseTriangulo || ldTriangulo+baseTriangulo <= liTriangulo) {
+                    numPerimetroTriangulo.value = '';
+                    numAreaTriangulo.value = '';
+                    pAvisoTriangulo.innerText = 'Las medida otorgadas corresponden a un triángulo imposible. La suma de 2 de sus lados siempre debe ser mayor al tercer lado.';
+                }
+                else {
+                    numPerimetroTriangulo.value = calcularPerimetroTriangulo(baseTriangulo, ldTriangulo, liTriangulo);
+                    numAreaTriangulo.value = calcularAreaTriangulo(baseTriangulo, ldTriangulo, liTriangulo);
+                    pAvisoTriangulo.innerText = '';
+                }
             }
             else {
                 numPerimetroTriangulo.value = '';
