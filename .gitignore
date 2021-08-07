@@ -1,2 +1,1 @@
-*.css
-*.css.map
+# No se pueden excluir archivos de compilación ya que se hará depoy automático en GitHub pages
