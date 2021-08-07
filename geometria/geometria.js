@@ -79,7 +79,7 @@ window.onload = (ev) => {
                 if (baseTriangulo+liTriangulo <= ldTriangulo || liTriangulo+ldTriangulo <= baseTriangulo || ldTriangulo+baseTriangulo <= liTriangulo) {
                     numPerimetroTriangulo.value = '';
                     numAreaTriangulo.value = '';
-                    pAvisoTriangulo.innerText = 'Las medida otorgadas corresponden a un triángulo imposible. La suma de 2 de sus lados siempre debe ser mayor al tercer lado.';
+                    pAvisoTriangulo.innerText = 'Las medida otorgadas corresponden a un triángulo imposible. La suma de 2 de sus lados siempre debe ser mayor al lado restante.';
                 }
                 else {
                     numPerimetroTriangulo.value = calcularPerimetroTriangulo(baseTriangulo, ldTriangulo, liTriangulo);

@@ -19,19 +19,14 @@ window.onload = (ev) => {
     });
 
     let objElementos = [];
-    const selElementos = document.getElementById('selElementos');
-    selElementos.setAttribute('size', '15');
-    const selTop5 = document.getElementById('selTop5');
-    selTop5.setAttribute('size', 4);
+    const txtaElementos = document.getElementById('txtaElementos');
+    const txtaTop5 = document.getElementById('txtaTop5');
     
     for (let i = 0; i < 15; i ++) {
         const nombre = arrayNombres[Math.floor(Math.random() * arrayNombres.length)];
         const apellido = arrayApellidos[Math.floor(Math.random() * arrayApellidos.length)];
         const salario = arraySalarios[Math.floor(Math.random() * arraySalarios.length)];
-        const elemento = document.createElement('option');
-        elemento.value = salario;
-        elemento.innerText = nombre + ' ' + apellido + ', Salario: ' + divisa.format(salario);
-        selElementos.appendChild(elemento);
+        txtaElementos.value += nombre + ' ' + apellido + ', Salario: ' + divisa.format(salario) + '\r\n';
         const objElemento = {
             "nombre": nombre, 
             "apellido": apellido, 
@@ -46,7 +41,7 @@ window.onload = (ev) => {
         txtMedianaSalarios.value = divisa.format(calcularMedianaSalarios());
         txtSalarioMasBajo.value = divisa.format(objElementos[0].salario);
         txtSalarioMasAlto.value = divisa.format(objElementos[objElementos.length - 1].salario);
-        selTop5.innerHTML = '';
+        txtaTop5.value = '';
         calcularTop5();
     });
 
@@ -72,10 +67,7 @@ window.onload = (ev) => {
     function calcularTop5 () {
         const decima = Math.floor(objElementos.length / 5);
         for (let i = objElementos.length - (decima) ; i < objElementos.length ; i ++) {
-            const elemento = document.createElement('option');
-            elemento.value = objElementos[i].salario;
-            elemento.innerText = objElementos[i].nombre + ' ' + objElementos[i].apellido + ', Salario: ' + divisa.format(objElementos[i].salario);
-            selTop5.appendChild(elemento);
+            txtaTop5.value += objElementos[i].nombre + ' ' + objElementos[i].apellido + ', Salario: ' + divisa.format(objElementos[i].salario) + '\r\n';
         };
     }
 }

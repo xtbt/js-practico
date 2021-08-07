@@ -1,15 +1,11 @@
 'use strict';
 window.onload = (ev) => {
     let arrayElementos = [];
-    const selElementos = document.getElementById('selElementos');
-    selElementos.setAttribute('size', '10');
+    const txtaElementos = document.getElementById('txtaElementos');
     
     for (let i = 0; i < 20; i ++) {
         const valor = Math.floor(Math.random() * 30);
-        const elemento = document.createElement('option');
-        elemento.value = valor;
-        elemento.innerText = valor;
-        selElementos.appendChild(elemento);
+        txtaElementos.value += 'Elemento ' + (i+1) + ': ' + valor + '\r\n';
         arrayElementos.push(valor);
     };
 

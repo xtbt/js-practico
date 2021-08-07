@@ -169,7 +169,7 @@ html {
   margin: 0.8rem;
 }
 
-.form_group__form select {
+.form_group__form textarea {
   width: 100%;
 }
 
