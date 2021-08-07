@@ -54,9 +54,7 @@ window.onload = (ev) => {
         arrayElementos.map((elementoActual) => {
             objetoIncidencias[elementoActual] ? objetoIncidencias[elementoActual] ++ : objetoIncidencias[elementoActual] = 1;
         });
-        console.log(objetoIncidencias);
         const arrayAcumulados = Object.entries(objetoIncidencias).sort((valor1, valor2) => valor1[1] - valor2[1]);
-        console.log(arrayAcumulados);
-        return arrayAcumulados[arrayAcumulados.length-1][0] + ' Incidencias: ' + arrayAcumulados[arrayAcumulados.length-1][1];
+        return arrayAcumulados[arrayAcumulados.length-1][0] + ' | Incidencias: ' + arrayAcumulados[arrayAcumulados.length-1][1];
     };
 }

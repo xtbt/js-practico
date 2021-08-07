@@ -26,11 +26,11 @@
         </nav>
         <section class="main__content">
             <h2 class="main__title">Análisis salarial</h2>
-            <p class="main__text">Cálculo del top 10 de salarios en la ciudad de Tijuana, México, a partir de una lista aleatoria de elementos.</p>
+            <p class="main__text">Cálculo del top 5% de salarios en la ciudad de Tijuana, México, a partir de una lista aleatoria de elementos.</p>
             <section class="form_group">
                 <div class="form_group__container">
                     <h3 class="form_group__title">Listado de elementos</h3>
-                    <p class="form_group__text">A continuación se muestra un listado de elementos con los que se podra calcular el top 10 de salarios.</p>
+                    <p class="form_group__text">A continuación se muestra un listado de elementos con los que se podra calcular el top 5% de salarios.</p>
                     <form class="form_group__form" method="post">
                         <fieldset>
                             <legend>Elementos generados</legend>
@@ -40,11 +40,22 @@
                         </fieldset>
                         <fieldset>
                             <legend>Resultado</legend>
-                            <select id="selTop10">
-                            </select>
+                            <label for="txtSalarioMasBajo">El salario más bajo es de:
+                                <input type="text" name="txtSalarioMasBajo" id="txtSalarioMasBajo" readonly="readonly" />
+                            </label>
+                            <label for="txtMedianaSalarios">La mediana de salarios es de:
+                                <input type="text" name="txtMedianaSalarios" id="txtMedianaSalarios" readonly="readonly" />
+                            </label>
+                            <label for="txtSalarioMasAlto">El salario más alto es de:
+                                <input type="text" name="txtSalarioMasAlto" id="txtSalarioMasAlto" readonly="readonly" />
+                            </label>
+                            <label for="selTop5">Top 5% de salarios:
+                                <select id="selTop5">
+                                </select>
+                            </label>
                             <p class="form_group__text--error" id="msjAvisoTop10"></p>
                         </fieldset>
-                        <input type="button" id="btnCalcularTop10" value="Calcular Top 10 salarios" />
+                        <input type="button" id="btnCalcularTop5" value="Generar análisis salarial" />
                     </form>
                 </div>
             </section>
